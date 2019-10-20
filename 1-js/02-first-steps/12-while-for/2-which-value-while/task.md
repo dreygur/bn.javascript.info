@@ -2,9 +2,9 @@ importance: 4
 
 ---
 
-# Which values does the while loop show?
+# while লুপটি কোন মানগুলি দেখাবে?
 
-For every loop iteration, write down which value it outputs and then compare it with the solution.
+লুপের প্রতিটি পুনরাবৃত্তির জন্য, write down which value it outputs and then compare it with the solution.
 
 Both loops `alert` the same values, or not?
 
