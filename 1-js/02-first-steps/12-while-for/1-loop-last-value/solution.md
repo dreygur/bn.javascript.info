@@ -1,4 +1,4 @@
-The answer: `1`.
+উত্তর: `1`.
 
 ```js run
 let i = 3;
@@ -8,9 +8,9 @@ while (i) {
 }
 ```
 
-Every loop iteration decreases `i` by `1`. The check `while(i)` stops the loop when `i = 0`.
+পর্রতিটি লুপের পুনরাবৃত্তি `i` এর মান `1` করে কমাচ্ছে। এখানে `while(i)` `i` এর মান পরীক্ষা করে এবং `i = 0`হলে লুপ থামিয়ে দেয়।
 
-Hence, the steps of the loop form the following sequence ("loop unrolled"):
+অতএব, লুপের প্রতিটি ধাপ পর্যায়ক্রমে লুপটিকে চূড়ান্ত অবস্থায় পৌছে দেয়:
 
 ```js
 let i = 3;
