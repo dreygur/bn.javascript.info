@@ -1,13 +1,13 @@
-The task demonstrates how postfix/prefix forms can lead to different results when used in comparisons.
+এই টাস্কটায় প্রিফিক্স/পোস্টফিক্স ফর্ম তুলনা করার সময় কিভাবে আলাদা ফল দিতে পারে সেটা দেখানো হবে।
 
-1. **From 1 to 4**
+1. **১ থেকে ৪ পর্যন্ত**
 
     ```js run
     let i = 0;
     while (++i < 5) alert( i );
     ```
 
-    The first value is `i = 1`, because `++i` first increments `i` and then returns the new value. So the first comparison is `1 < 5` and the `alert` shows `1`.
+    প্রথম মান `i = 1`, কারণ `++i`  `i` -কে বাড়িয়ে নতুন মান দেয়।. সুতরাং প্রথম তুলনা `1 < 5` and the `alert` shows `1`.
 
     Then follow `2, 3, 4…` -- the values show up one after another. The comparison always uses the incremented value, because `++` is before the variable.
 
