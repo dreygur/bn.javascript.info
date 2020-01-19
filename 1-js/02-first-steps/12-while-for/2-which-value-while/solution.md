@@ -1,4 +1,4 @@
-এই টাস্কটায় প্রিফিক্স/পোস্টফিক্স ফর্ম তুলনা করার সময় কিভাবে আলাদা ফল দিতে পারে সেটা দেখানো হবে।
+এই টাস্কটায় প্রিফিক্স/পোস্টফিক্স ফর্ম তুলনা করার সময় কিভাবে আলাদা ফলাফল দিতে পারে সেটা দেখানো হবে।
 
 1. **১ থেকে ৪ পর্যন্ত**
 
@@ -7,21 +7,21 @@
     while (++i < 5) alert( i );
     ```
 
-    প্রথম মান `i = 1`, কারণ `++i`  `i` -কে বাড়িয়ে নতুন মান দেয়।. সুতরাং প্রথম তুলনা `1 < 5` and the `alert` shows `1`.
+    প্রথম মান `i = 1`, কারণ `++i`  `i` -কে বাড়িয়ে নতুন মান দেয়।. সুতরাং প্রথম তুলনা `1 < 5` এবং `alert` এ মান `1`.
 
-    Then follow `2, 3, 4…` -- the values show up one after another. The comparison always uses the incremented value, because `++` is before the variable.
+    তারপর ক্রমান্বয়ে `2, 3, 4…` -- মানগুলো একের পর এক আসতে থাকে. তুলনার সময় প্রতিবার বাড়তি মানটা নেয়া হয়, কারণ ভ্যারিয়েবলের আগে `++` আছে।
 
-    Finally, `i = 4` is incremented to `5`, the comparison `while(5 < 5)` fails, and the loop stops. So `5` is not shown.
-2. **From 1 to 5**
+    সবশেষে, `i = 4` বেরে `5` হয়েছে, `while(5 < 5)` -এই তুলনাটা অচল হয়ে যায় আর লুপটাও থেমে যায়. তাই `5` দেখা যায় না।
+2. **১ থেকে ৫ পর্যন্ত**
 
     ```js run
     let i = 0;
     while (i++ < 5) alert( i );
     ```
 
-    The first value is again `i = 1`. The postfix form of `i++` increments `i` and then returns the *old* value, so the comparison `i++ < 5` will use `i = 0` (contrary to `++i < 5`).
+    আবারও প্রথম মান `i = 1`. `i++` -এর পোস্টফিক্স ফর্ম `i` এর মান বাড়ায় এবং আগের মান রিটার্ন করে, সুতরাং `i++ < 5` তুলনায়  `i = 0` (`++i < 5` -এর বিপরীত).
 
-    But the `alert` call is separate. It's another statement which executes after the increment and the comparison. So it gets the current `i = 1`.
+    কিন্তু `alert` কলটা আলাদা. It's another statement which executes after the increment and the comparison. So it gets the current `i = 1`.
 
     Then follow `2, 3, 4…`
 
