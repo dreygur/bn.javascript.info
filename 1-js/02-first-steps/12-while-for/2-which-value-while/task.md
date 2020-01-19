@@ -4,17 +4,17 @@ importance: 4
 
 # while লুপটি কোন মানগুলি দেখাবে?
 
-লুপের প্রতিটি পুনরাবৃত্তির জন্য, write down which value it outputs and then compare it with the solution.
+লুপের প্রতিটি পুনরাবৃত্তির জন্য, এটি কি মান আউটপুট দেয় তা লিখুন এবং উত্তরের সাথে তুলনা করুন।
 
-Both loops `alert` the same values, or not?
+দুটি লুপই কি একই মান `alert`করে?
 
-1. The prefix form `++i`:
+1. শুরুতে `++i`:
 
     ```js
     let i = 0;
     while (++i < 5) alert( i );
     ```
-2. The postfix form `i++`
+2. শেষে `i++`
 
     ```js
     let i = 0;
