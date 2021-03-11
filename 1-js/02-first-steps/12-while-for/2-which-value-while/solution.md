@@ -11,7 +11,7 @@
 
     তারপর ক্রমান্বয়ে `2, 3, 4…` -- মানগুলো একের পর এক আসতে থাকে. তুলনার সময় প্রতিবার বাড়তি মানটা নেয়া হয়, কারণ ভ্যারিয়েবলের আগে `++` আছে।
 
-    সবশেষে, `i = 4` বেরে `5` হয়েছে, `while(5 < 5)` -এই তুলনাটা অচল হয়ে যায় আর লুপটাও থেমে যায়. তাই `5` দেখা যায় না।
+    সবশেষে, `i = 4` বেড়ে `5` হয়েছে, `while(5 < 5)` -এই তুলনাটা অচল হয়ে যায় আর লুপটাও থেমে যায়. তাই `5` দেখা যায় না।
 2. **১ থেকে ৫ পর্যন্ত**
 
     ```js run
@@ -21,10 +21,11 @@
 
     আবারও প্রথম মান `i = 1`. `i++` -এর পোস্টফিক্স ফর্ম `i` এর মান বাড়ায় এবং আগের মান রিটার্ন করে, সুতরাং `i++ < 5` তুলনায়  `i = 0` (`++i < 5` -এর বিপরীত).
 
-    কিন্তু `alert` কলটা আলাদা. It's another statement which executes after the increment and the comparison. So it gets the current `i = 1`.
+    কিন্তু `alert` কলটা আলাদা. এটা একটা আলাদা স্টেটমেন্ট যা প্রতিবার ইনক্রিমেন্ট এবং তুলনা শেষে এক্সিকিউট হয়। ফলে এর মান দাঁড়ায় `i = 1`
+    
+    আর তারপর `2, 3, 4...`
+    
+    এবার `i = 4` এ থামা যাক। `++1` ফ্রিফিক্স ফর্মটা এর মান বাড়িয়ে একে `5` করে তারপর তুলনা করবে। কিন্তু আমাদের কাছে আছে `i++` য়া পোস্টফিক্স ফর্ম। তাই এটি `i` কে বাড়িয়ে `5` করে, কিন্তু পুরোো মানটাই রিটার্ন করবে। ফলে তুলনাটা আসলে `while(4 < 5)` -- true, আর কট্রোলটা `alert` এর কাছে চলে যায়।
 
-    Then follow `2, 3, 4…`
 
-    Let's stop on `i = 4`. The prefix form `++i` would increment it and use `5` in the comparison. But here we have the postfix form `i++`. So it increments `i` to `5`, but returns the old value. Hence the comparison is actually `while(4 < 5)` -- true, and the control goes on to `alert`.
-
-    The value `i = 5` is the last one, because on the next step `while(5 < 5)` is false.
+    `i = 5` মানটাই শেষ মান, কারণ পরের ধাপে `while(5 < 5)` false
