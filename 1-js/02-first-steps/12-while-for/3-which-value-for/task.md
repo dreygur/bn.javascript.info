@@ -2,18 +2,18 @@ importance: 4
 
 ---
 
-# Which values get shown by the "for" loop?
+# "for" লুপে কি কি মান দেখা যাবে?
 
-For each loop write down which values it is going to show. Then compare with the answer.
+প্রতিটা লুপে যা দেখা যাবে তা লিখুন। এরপর প্রদত্ত উত্তরের সাথে তুলনা করুন।
 
-Both loops `alert` same values or not?
+দুটি লুপই কি একই মান `alert` করে?
 
-1. The postfix form:
+১. পোস্টফিক্স ফর্ম:
 
     ```js
     for (let i = 0; i < 5; i++) alert( i );
     ```
-2. The prefix form:
+২. প্রিফিক্স ফর্ম:
 
     ```js
     for (let i = 0; i < 5; ++i) alert( i );
